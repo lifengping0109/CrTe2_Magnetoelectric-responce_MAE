@@ -1,0 +1,24 @@
+  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
+  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
+Removing mpi version 2021.6.0
+Use `module list` to view any remaining dependent modules.
+Removing mkl version 2022.1.0
+Use `module list` to view any remaining dependent modules.
+Removing compiler version 2022.1.0
+Use `module list` to view any remaining dependent modules.
+  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
+  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
+Removing oclfpga version 2022.1.0
+Use `module list` to view any remaining dependent modules.
+Removing compiler-rt version 2022.1.0
+Use `module list` to view any remaining dependent modules.
+Removing tbb version 2021.6.0
+Use `module list` to view any remaining dependent modules.
+Loading mpi version 2021.6.0
+Loading mkl version 2022.1.0
+Loading tbb version 2021.6.0
+Loading compiler-rt version 2022.1.0
+
+Loading mkl/2022.1.0
+  Loading requirement: tbb/2021.6.0 compiler-rt/2022.1.0
+2025年 12月 23日 星期二 15:18:55 KST
