@@ -1,5 +1,0 @@
-&PROJWFC
-  prefix= 'crte2',
-  outdir= './tmp',
-  filpdos= 'cr_pdos.dat'
-/
