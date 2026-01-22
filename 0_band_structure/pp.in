@@ -1,0 +1,5 @@
+&PROJWFC
+  prefix= './crte2',
+  outdir= './',
+  filpdos= 'al_pdos.dat'
+/
