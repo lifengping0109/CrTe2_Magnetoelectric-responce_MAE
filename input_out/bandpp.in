@@ -1,7 +1,0 @@
-&bands
-prefix = 'crte2'
-outdir ='./'
-filband = 'band_dn.dat'
-spin_component=2
-/
-
