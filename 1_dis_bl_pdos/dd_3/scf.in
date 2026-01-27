@@ -1,0 +1,52 @@
+&control 
+  calculation = 'scf',
+  prefix = 'crte2',
+  pseudo_dir = '~/upf',
+  outdir = './tmp'
+/
+&system
+  ibrav = 0,
+  nat = 6,
+  ntyp = 3,
+  lda_plus_u = .true.,
+  Hubbard_U(1) = 2.0,
+  Hubbard_U(2) = 2.0,
+  vdw_corr = 'Grimme-D2',
+  ecutwfc = 80,
+  ecutrho = 800,
+  nosym = .true.,
+  occupations = 'smearing',
+  smearing = 'gauss',
+  degauss = 0.005,
+  nspin = 2,
+  starting_magnetization(1) = 1.0,
+  starting_magnetization(2) = -1.0
+/
+&electrons
+  electron_maxstep = 200,
+  mixing_beta = 0.3,
+  diagonalization = 'david',
+  conv_thr=1e-10
+  mixing_mode = 'local-TF',
+  diago_david_ndim = 4
+/
+ATOMIC_SPECIES
+Cr1  51.99610  Cr.pbe.UPF 
+Cr2  51.99610  Cr.pbe.UPF
+Te  127.60000  Te.pbe.UPF
+
+CELL_PARAMETERS angstrom
+   3.8599998951   0.0000000000   0.0000000000
+  -1.9299999475   3.3428579678   0.0000000000
+   0.0000000000   0.0000000000  40.3694992065
+
+ATOMIC_POSITIONS (angstrom)
+Cr1   0.000000000   0.000000000   23.267364048
+Cr2   0.000000000   0.000000000   16.502135158
+Te    1.899621792   1.096724837   21.669944017
+Te   -0.000019326   2.193483148   18.099555190
+Te   -0.000019326   2.193483148   24.887392826
+Te    1.899621792   1.096724837   14.882106380
+
+K_POINTS automatic			
+12 12 1 0 0 0
