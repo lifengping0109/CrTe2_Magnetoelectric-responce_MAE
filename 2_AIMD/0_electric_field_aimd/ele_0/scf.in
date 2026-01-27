@@ -1,0 +1,64 @@
+&control
+  calculation='md',
+  prefix='./tmp',
+  pseudo_dir = '~/upf',
+  outdir = './',
+  tstress = .true.,
+  tprnfor = .true.,
+  nstep = 3000,
+  tefield = .true.
+  dipfield = .true.
+  dt = 40,
+/
+&system
+  ibrav = 0,
+  nat = 6,
+  ntyp = 3,
+  lda_plus_u = .true.,
+  Hubbard_U(1) = 2.0,
+  Hubbard_U(2) = 2.0,
+  vdw_corr = 'Grimme-D2',
+  ecutwfc = 80,
+  ecutrho = 800,
+  nosym = .true.,
+  occupations = 'smearing',
+  smearing = 'gauss',
+  degauss = 0.005,
+  nspin = 2,
+  edir = 3,
+  emaxpos = 0.9
+  eopreg = 0.2
+  eamp = 0
+  starting_magnetization(1) = 1.0,
+  starting_magnetization(2) = -1.0
+/
+&electrons
+  electron_maxstep = 200,
+  mixing_beta = 0.3,
+  mixing_mode = 'local-TF',
+  diagonalization = 'david',
+  diago_david_ndim = 4
+/
+&ions
+  ion_temperature='initial',
+  ion_dynamics = 'verlet',
+  tempw = 300.0,
+  nraise = 1,
+/
+ATOMIC_SPECIES
+Cr1   51.99610  Cr.pbe.UPF
+Cr2   51.99610  Cr.pbe.UPF
+Te   127.60000  Te.pbe.UPF
+CELL_PARAMETERS angstrom
+    3.8599998951     0.0000000000     0.0000000000
+   -1.9299999475     3.3428579678     0.0000000000
+0.0000000000         0.0000000000        40.3694992065
+ATOMIC_POSITIONS (angstrom)
+Cr1      0.0000000000     0.0000000000    23.2673640480
+Cr2      0.0000000000     0.0000000000    17.1021351580
+Te       1.8996217920     1.0967248370    21.6699440170
+Te      -0.0000193260     2.1934831480    18.6995551900
+Te      -0.0000193260     2.1934831480    24.8873928260
+Te       1.8996217920     1.0967248370    15.4821063800
+K_POINTS automatic
+3 3 1 0 0 0
