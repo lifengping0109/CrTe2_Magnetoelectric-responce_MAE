@@ -1,0 +1,78 @@
+&control
+    calculation = 'nscf'
+    restart_mode='from_scratch',
+    prefix='crte2',
+    tstress = .true.
+    tprnfor = .true.
+    pseudo_dir = './'
+    outdir='./outdir_scf'
+    verbosity = 'high'
+ /
+ &system
+    ibrav = 0,
+    A =6.91215
+    nat=  24,
+    ntyp= 3,
+    ecutwfc = 60.0,
+    occupations = 'smearing',
+    smearing = 'gaussian',
+    degauss = 0.005,
+    nspin = 1,
+    lda_plus_u_kind = 1
+    lspinorb =.true.
+    noncolin = .true.
+    lforcet =.true.
+    nosym = .true.
+    vdw_corr = 'Grimme-D2'
+    lda_plus_u=.true.,
+    Hubbard_U(1)=3.0,
+    Hubbard_U(2)=3.0,
+    starting_magnetization(1) = 0.5,
+    starting_magnetization(2) = 0.5,
+    starting_magnetization(3) = 0.5
+    angle1(1)=30.0,angle1(2)=30.0,
+    angle2(1)=0.0,angle2(2)=0.0,
+ /
+ &electrons
+  startingpot = 'file'
+  mixing_beta = 0.3
+  conv_thr = 1.0d-11
+  diagonalization = 'cg'
+  mixing_mode = 'local-TF'
+ /
+CELL_PARAMETERS (alat= 13.06207049)
+0.953152452  -0.000289689   0.00000000
+-0.000235901   1.029624855   0.000000000
+0.000000000   0.000000000   6.818140700
+ATOMIC_SPECIES
+ Cr1  51.99610   Cr.rel.UPF
+ Cr2  51.99610   Cr.rel.UPF
+ Te  127.60000  Te.rel.UPF
+ATOMIC_POSITIONS (crystal)
+Te       0.255526361   0.527107450   0.495225434
+Te       0.259323053   0.834342383   0.649528212
+Te       0.259138662   0.531948880   0.417040147
+Te       0.261343707   0.837857214   0.571598954
+Te       0.007102973   0.029871027   0.495612422
+Te       0.508173023   0.028375124   0.495681396
+Te       0.511428178   0.332595428   0.649801570
+Te       0.009656529   0.031489024   0.417362439
+Te       0.506641939   0.031483636   0.417308260
+Te       0.511129013   0.336121401   0.571818390
+Te       0.009283448   0.332329664   0.649809818
+Te       0.010937537   0.338396538   0.571747671
+Te       0.758563850   0.527639240   0.495270509
+Te       0.760597266   0.833621968   0.649504280
+Te       0.755937207   0.531827880   0.417031953
+Te       0.760200739   0.838271894   0.571617779
+Cr1      0.256771518   0.825187356   0.456573662
+Cr1      0.260544857   0.540094881   0.610542832
+Cr1      0.507193781   0.324379270   0.456737487
+Cr1      0.010511545   0.041966393   0.610316459
+Cr2      0.510110880   0.040453092   0.610841696
+Cr2      0.006560764   0.326841900   0.456386546
+Cr2      0.757043341   0.825999689   0.456374767
+Cr2      0.760039831   0.541471668   0.610338315
+K_POINTS automatic
+4 4 1 0 0 0
+
